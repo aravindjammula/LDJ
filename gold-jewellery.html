@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Jewellery | LDJ Gold & Diamonds | 18K & 22K Gold Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* Category Navigation */
+        .category-nav {
+            padding: 30px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .category-nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category-nav-link {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-nav-link:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .category-nav-link.active {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+
+        .category-nav-link i {
+            font-size: 18px;
+        }
+
+        /* Gold Categories Section */
+        .gold-categories {
+            padding: 80px 0 100px;
+            background-color: #fff;
+        }
+
+        .category-section {
+            margin-bottom: 100px;
+            scroll-margin-top: 150px;
+        }
+
+        .category-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-title h2 {
+            font-size: 36px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-title h2 i {
+            color: #D4AF37;
+            font-size: 30px;
+        }
+
+        .category-title a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #D4AF37;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .category-title a:hover {
+            gap: 12px;
+            color: #F4C542;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #D4AF37;
+            color: #000;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .product-image {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .product-info .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-info .karat {
+            color: #D4AF37;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .product-info .price {
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Gold Types Banner */
+        .gold-types {
+            padding: 80px 0;
+            background-color: #f8f8f8;
+        }
+
+        .types-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .type-card {
+            background: #fff;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .type-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .type-card p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .type-card .type-details {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .type-details span {
+            display: block;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .type-details span strong {
+            color: #1a1a1a;
+        }
+
+        /* Gold Care Section */
+        .gold-care {
+            padding: 100px 0;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        .care-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .care-content {
+            flex: 1;
+        }
+
+        .care-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .care-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .care-tips {
+            margin-top: 40px;
+        }
+
+        .care-tip {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .care-tip i {
+            font-size: 22px;
+            color: #D4AF37;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .care-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            height: 450px;
+        }
+
+        .care-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Consultation CTA */
+        .consultation-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .care-container {
+                flex-direction: column;
+            }
+            
+            .care-image {
+                order: -1;
+                height: 400px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .types-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .category-nav {
+                top: 70px;
+            }
+            
+            .category-nav-container {
+                gap: 10px;
+            }
+            
+            .category-nav-link {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+            
+            .product-actions .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .category-title h2 {
+                font-size: 28px;
+            }
+            
+            .category-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .cta-content h2 {
+                font-size: 32px;
+            }
+            
+            .cta-content p {
+                font-size: 18px;
+            }
+            
+            .care-content h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Gold Jewellery Collection</h1>
+            <p class="tagline">Timeless elegance in 18K and 22K gold. Discover our exquisite range of handcrafted gold jewellery, where traditional craftsmanship meets contemporary design for pieces that will be treasured for generations.</p>
+            <a href="#necklaces" class="btn btn-outline">Explore Collections</a>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="container category-nav-container">
+            <a href="#necklaces" class="category-nav-link active">
+                <i class="fas fa-gem"></i>
+                Necklaces
+            </a>
+            <a href="#bangles" class="category-nav-link">
+                <i class="fas fa-circle-notch"></i>
+                Bangles
+            </a>
+            <a href="#rings" class="category-nav-link">
+                <i class="far fa-circle"></i>
+                Rings
+            </a>
+            <a href="#earrings" class="category-nav-link">
+                <i class="fas fa-star"></i>
+                Earrings
+            </a>
+            <a href="#chains" class="category-nav-link">
+                <i class="fas fa-link"></i>
+                Chains
+            </a>
+        </div>
+    </section>
+
+    <!-- Gold Categories Section -->
+    <section class="gold-categories">
+        <div class="container">
+            <!-- Necklaces Section -->
+            <div class="category-section" id="necklaces">
+                <div class="category-title">
+                    <h2><i class="fas fa-gem"></i> Gold Necklaces</h2>
+                    <a href="#necklaces">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Gold Necklace">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Gold Necklace</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$2,450</span>
+                            </div>
+                            <p>A timeless 20-inch necklace with intricate traditional design, perfect for special occasions and everyday elegance.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Pendant Necklace">
+                        </div>
+                        <div class="product-info">
+                            <h3>Modern Pendant Necklace</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$1,850</span>
+                            </div>
+                            <p>Contemporary design with geometric pendant, crafted in 18K yellow gold with a secure clasp mechanism.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Layered Necklace Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Layered Necklace Set</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$3,200</span>
+                            </div>
+                            <p>Set of three delicate layered necklaces in varying lengths, perfect for creating a modern, stylish look.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Traditional Temple Necklace">
+                        </div>
+                        <div class="product-info">
+                            <h3>Traditional Temple Necklace</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$4,500</span>
+                            </div>
+                            <p>Heavy traditional temple necklace with intricate craftsmanship, ideal for weddings and ceremonial occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bangles Section -->
+            <div class="category-section" id="bangles">
+                <div class="category-title">
+                    <h2><i class="fas fa-circle-notch"></i> Gold Bangles</h2>
+                    <a href="#bangles">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Gold Bangle">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Gold Bangle</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$1,250</span>
+                            </div>
+                            <p>Smooth, solid gold bangle with timeless design, available in multiple sizes for perfect fit.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Textured Bangle Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Textured Bangle Set</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$2,100</span>
+                            </div>
+                            <p>Set of three bangles with different textures - hammered, brushed, and smooth - for a contemporary stack.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diamond Accent Bangle">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Accent Bangle</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$2,800</span>
+                            </div>
+                            <p>Elegant gold bangle with subtle diamond accents, perfect for adding sparkle to any outfit.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Traditional Kada">
+                        </div>
+                        <div class="product-info">
+                            <h3>Traditional Kada</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$3,500</span>
+                            </div>
+                            <p>Heavy traditional kada with intricate craftsmanship, a statement piece for special occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rings Section -->
+            <div class="category-section" id="rings">
+                <div class="category-title">
+                    <h2><i class="far fa-circle"></i> Gold Rings</h2>
+                    <a href="#rings">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Band Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Band Ring</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$850</span>
+                            </div>
+                            <p>Simple yet elegant gold band ring, perfect for everyday wear or as a wedding band.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Statement Cocktail Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Statement Cocktail Ring</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$1,450</span>
+                            </div>
+                            <p>Bold geometric design cocktail ring, making a statement with its unique contemporary style.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Stackable Ring Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Stackable Ring Set</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$1,800</span>
+                            </div>
+                            <p>Set of three thin stackable rings with different textures, perfect for creating personalized combinations.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Traditional Design Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Traditional Design Ring</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$1,200</span>
+                            </div>
+                            <p>Intricately designed traditional ring with cultural motifs, handcrafted by our master artisans.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Earrings Section -->
+            <div class="category-section" id="earrings">
+                <div class="category-title">
+                    <h2><i class="fas fa-star"></i> Gold Earrings</h2>
+                    <a href="#earrings">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Stud Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Stud Earrings</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$650</span>
+                            </div>
+                            <p>Simple and elegant gold stud earrings, perfect for everyday wear and suitable for all occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hoop Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Hoop Earrings</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$950</span>
+                            </div>
+                            <p>Medium-sized hoop earrings with secure closure, a versatile accessory that complements any outfit.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Chandelier Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Chandelier Earrings</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$1,800</span>
+                            </div>
+                            <p>Elegant chandelier design with intricate detailing, perfect for weddings and special occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jhumka Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Traditional Jhumka Earrings</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$2,200</span>
+                            </div>
+                            <p>Traditional Indian jhumka earrings with intricate filigree work and bell-shaped design.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chains Section -->
+            <div class="category-section" id="chains">
+                <div class="category-title">
+                    <h2><i class="fas fa-link"></i> Gold Chains</h2>
+                    <a href="#chains">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Rope Chain">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Rope Chain</h3>
+                            <div class="product-meta">
+                                <span class="karat">22K Gold</span>
+                                <span class="price">$1,850</span>
+                            </div>
+                            <p>20-inch rope chain with secure lobster clasp, a versatile classic that pairs well with any pendant.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cuban Link Chain">
+                        </div>
+                        <div class="product-info">
+                            <h3>Cuban Link Chain</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$2,400</span>
+                            </div>
+                            <p>Bold 24-inch Cuban link chain with thick interlocking links, making a strong style statement.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Figaro Chain">
+                        </div>
+                        <div class="product-info">
+                            <h3>Figaro Chain</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$1,650</span>
+                            </div>
+                            <p>Traditional Figaro pattern chain with alternating link sizes, a timeless design with modern appeal.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Box Chain">
+                        </div>
+                        <div class="product-info">
+                            <h3>Delicate Box Chain</h3>
+                            <div class="product-meta">
+                                <span class="karat">18K Gold</span>
+                                <span class="price">$1,200</span>
+                            </div>
+                            <p>Thin and delicate box chain perfect for wearing delicate pendants or layering with other chains.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Types Banner -->
+    <section class="gold-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gold Varieties</h2>
+                <p>Discover the different types of gold we work with, each offering unique characteristics and beauty</p>
+            </div>
+            
+            <div class="types-container">
+                <div class="type-card">
+                    <h3>22K Gold</h3>
+                    <p>The purest form of gold used in jewellery, containing 91.6% pure gold. Known for its rich, deep yellow color and traditional appeal.</p>
+                    <div class="type-details">
+                        <span><strong>Purity:</strong> 91.6% Pure Gold</span>
+                        <span><strong>Color:</strong> Rich Yellow</span>
+                        <span><strong>Best For:</strong> Traditional & Heirloom Pieces</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <h3>18K Gold</h3>
+                    <p>The perfect balance of purity and durability, containing 75% pure gold. Ideal for intricate designs and everyday wear.</p>
+                    <div class="type-details">
+                        <span><strong>Purity:</strong> 75% Pure Gold</span>
+                        <span><strong>Color:</strong> Warm Yellow</span>
+                        <span><strong>Best For:</strong> Everyday & Contemporary Designs</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <h3>Rose Gold</h3>
+                    <p>18K gold alloyed with copper for its distinctive pink hue. A modern choice with romantic appeal and unique warmth.</p>
+                    <div class="type-details">
+                        <span><strong>Purity:</strong> 75% Pure Gold</span>
+                        <span><strong>Color:</strong> Romantic Pink</span>
+                        <span><strong>Best For:</strong> Modern & Romantic Pieces</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Care Section -->
+    <section class="gold-care">
+        <div class="container">
+            <div class="care-container">
+                <div class="care-content">
+                    <h2>Caring for Your Gold Jewellery</h2>
+                    <p>Proper care ensures your gold jewellery maintains its beauty and value for generations. Follow these expert tips to keep your pieces looking their best.</p>
+                    
+                    <div class="care-tips">
+                        <div class="care-tip">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <h3>Regular Cleaning</h3>
+                                <p>Clean your gold jewellery with a soft cloth and mild soap solution. Avoid harsh chemicals that can damage the surface.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-box"></i>
+                            <div>
+                                <h3>Proper Storage</h3>
+                                <p>Store each piece separately in soft pouches to prevent scratches. Keep away from moisture and direct sunlight.</p>
+                            </div>
+                        </div>
+                        <div class="care-tip">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h3>Professional Maintenance</h3>
+                                <p>Bring your jewellery to us annually for professional cleaning, inspection, and any necessary repairs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn" style="margin-top: 30px;">Schedule Maintenance</a>
+                </div>
+                <div class="care-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gold Jewellery Care">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="consultation-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Find Your Perfect Gold Piece</h2>
+                <p>Our gold jewellery experts are here to help you select the perfect piece or create a custom design that reflects your personal style. Schedule a consultation to explore our complete gold collection.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="contact.html" class="btn">Book a Consultation</a>
+                    <a href="custom.html" class="btn btn-outline">Create Custom Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we have created exquisite gold jewellery that celebrates life's most precious moments with timeless elegance and superior craftsmanship.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Gold Collections</h3>
+                    <ul>
+                        <li><a href="#necklaces">Gold Necklaces</a></li>
+                        <li><a href="#bangles">Gold Bangles</a></li>
+                        <li><a href="#rings">Gold Rings</a></li>
+                        <li><a href="#earrings">Gold Earrings</a></li>
+                        <li><a href="#chains">Gold Chains</a></li>
+                        <li><a href="custom.html">Custom Gold Designs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="custom.html">Custom Design</a></li>
+                        <li><a href="bridal.html">Bridal</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-7PM, Sun: 12PM-5PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #D4AF37;"></i> for three generations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Category navigation functionality
+        const categoryLinks = document.querySelectorAll('.category-nav-link');
+        const categorySections = document.querySelectorAll('.category-section');
+        
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                categoryLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Scroll to the target section
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 150,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active category link on scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -100px 0px'
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    categoryLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe category sections
+        categorySections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement && !this.classList.contains('category-nav-link')) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to product cards on scroll
+        const productObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            productObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

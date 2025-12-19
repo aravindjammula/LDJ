@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire Collection | LDJ Gold & Diamonds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base Styles (Consistent with Theme) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            padding: 14px 32px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after, nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* --- Page Hero --- */
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* --- Category Navigation --- */
+        .category-nav {
+            padding: 30px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .category-nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category-nav-link {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-nav-link:hover, .category-nav-link.active {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .category-nav-link.active {
+            background: #fff;
+            border-bottom: 3px solid #D4AF37;
+        }
+
+        .category-nav-link i {
+            font-size: 18px;
+        }
+
+        /* --- Products Section --- */
+        .solitaire-categories {
+            padding: 80px 0 100px;
+            background-color: #fff;
+        }
+
+        .category-section {
+            margin-bottom: 100px;
+            scroll-margin-top: 150px;
+        }
+
+        .category-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-title h2 {
+            font-size: 36px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-title h2 i {
+            color: #D4AF37;
+            font-size: 30px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #D4AF37;
+            color: #000;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+            font-weight: 600;
+        }
+
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        /* Tech Specs for Solitaire */
+        .product-specs {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .spec-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .spec-label { color: #666; }
+        .spec-val { font-weight: 600; color: #333; }
+
+        .product-info .price {
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .product-actions .btn, .product-actions .btn-outline {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* --- Diamond Education / Why Solitaire --- */
+        .solitaire-features {
+            padding: 100px 0;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
+
+        .feature-box i {
+            font-size: 40px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #aaa;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .section-header h2 { font-size: 36px; }
+            .page-hero h1 { font-size: 42px; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav {
+                position: fixed; top: 80px; left: 0; width: 100%;
+                background-color: rgba(0, 0, 0, 0.98); padding: 20px;
+                transform: translateY(-100%); opacity: 0; visibility: hidden;
+                transition: all 0.4s ease;
+            }
+            nav.active { transform: translateY(0); opacity: 1; visibility: visible; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 15px 0; }
+            .category-nav { top: 70px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .product-actions { flex-direction: column; }
+            .product-actions .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="vintage-gold.html">Vintage Gold</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Solitaire Collection</h1>
+            <p class="tagline">The ultimate expression of elegance. Our solitaire collection highlights the singular beauty of hand-selected diamonds, crafted to let their brilliance take center stage.</p>
+            <a href="#rings" class="btn btn-outline">View Collection</a>
+        </div>
+    </section>
+
+    <section class="category-nav">
+        <div class="container category-nav-container">
+            <a href="#rings" class="category-nav-link active">
+                <i class="far fa-gem"></i>
+                Solitaire Rings
+            </a>
+            <a href="#pendants" class="category-nav-link">
+                <i class="fas fa-gem"></i>
+                Pendants
+            </a>
+            <a href="#earrings" class="category-nav-link">
+                <i class="fas fa-star"></i>
+                Stud Earrings
+            </a>
+        </div>
+    </section>
+
+    <section class="solitaire-categories">
+        <div class="container">
+            <div class="category-section" id="rings">
+                <div class="category-title">
+                    <h2><i class="far fa-gem"></i> Solitaire Rings</h2>
+                    <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Solitaire Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Six-Prong Solitaire</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Carat:</span> <span class="spec-val">1.00 ct</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">G</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">VS2</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">Platinum</span></div>
+                            </div>
+                            <span class="price">$6,500</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="bridal.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New Arrival</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Oval Cut Solitaire">
+                        </div>
+                        <div class="product-info">
+                            <h3>Oval Cut Solitaire</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Carat:</span> <span class="spec-val">1.50 ct</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">F</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">VVS2</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">18K Gold</span></div>
+                            </div>
+                            <span class="price">$12,800</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="bridal.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Princess Cut Solitaire">
+                        </div>
+                        <div class="product-info">
+                            <h3>Princess Cut Solitaire</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Carat:</span> <span class="spec-val">0.90 ct</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">H</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">VS1</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">White Gold</span></div>
+                            </div>
+                            <span class="price">$4,200</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="bridal.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section" id="pendants">
+                <div class="category-title">
+                    <h2><i class="fas fa-gem"></i> Solitaire Pendants</h2>
+                    <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Classic</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Solitaire Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bezel Set Pendant</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Carat:</span> <span class="spec-val">0.50 ct</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">I</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">SI1</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">Yellow Gold</span></div>
+                            </div>
+                            <span class="price">$1,800</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="collections.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Pear Shape Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pear Solitaire Pendant</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Carat:</span> <span class="spec-val">0.75 ct</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">G</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">VS2</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">Platinum</span></div>
+                            </div>
+                            <span class="price">$3,400</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="collections.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="earrings">
+                <div class="category-title">
+                    <h2><i class="fas fa-star"></i> Solitaire Studs</h2>
+                    <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Everyday Essential</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diamond Studs">
+                        </div>
+                        <div class="product-info">
+                            <h3>Martini Setting Studs</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Total Weight:</span> <span class="spec-val">1.00 ctw</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">H</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">SI1</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">14K White Gold</span></div>
+                            </div>
+                            <span class="price">$2,800</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="collections.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Halo Studs">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halo Solitaire Studs</h3>
+                            <div class="product-specs">
+                                <div class="spec-row"><span class="spec-label">Total Weight:</span> <span class="spec-val">1.50 ctw</span></div>
+                                <div class="spec-row"><span class="spec-label">Color:</span> <span class="spec-val">G</span></div>
+                                <div class="spec-row"><span class="spec-label">Clarity:</span> <span class="spec-val">VS2</span></div>
+                                <div class="spec-row"><span class="spec-label">Metal:</span> <span class="spec-val">Platinum</span></div>
+                            </div>
+                            <span class="price">$5,200</span>
+                            <div class="product-actions">
+                                <a href="contact.html" class="btn btn-small">Inquire</a>
+                                <a href="collections.html" class="btn btn-small btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solitaire-features">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: #fff;">Why Choose a Solitaire?</h2>
+                <p style="color: #aaa;">A solitaire setting is the purest way to showcase a diamond's natural beauty. By focusing on a single stone, the quality of the cut, color, and clarity takes center stage.</p>
+            </div>
+            
+            <div class="features-container">
+                <div class="feature-box">
+                    <i class="fas fa-gem"></i>
+                    <h3>Certified Brilliance</h3>
+                    <p>All our solitaire diamonds above 0.50ct come with GIA or IGI certification to guarantee their quality.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Timeless Design</h3>
+                    <p>The solitaire style has remained the most popular choice for engagement rings for over a century.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-medal"></i>
+                    <h3>Lifetime Warranty</h3>
+                    <p>We stand by the craftsmanship of every piece, offering a lifetime warranty and free annual cleaning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>Timeless jewellery crafted with purity, trust, and elegance. Serving our clients for generations with the finest gold and diamond collections.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="custom.html">Custom Design</a></li>
+                        <li><a href="bridal.html">Bridal</a></li>
+                        <li><a href="vintage-gold.html">Vintage Gold</a></li>
+                        <li><a href="solitaire-collection.html">Solitaire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Jewellery Repair</a></li>
+                        <li><a href="#">Valuation & Appraisal</a></li>
+                        <li><a href="#">Custom Design</a></li>
+                        <li><a href="#">Gold Exchange</a></li>
+                        <li><a href="#">Bridal Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Main Road, Hyderabad, Telangana</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-8:30PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 LDJ Gold & Diamonds. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #D4AF37;"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Category navigation functionality
+        const categoryLinks = document.querySelectorAll('.category-nav-link');
+        const categorySections = document.querySelectorAll('.category-section');
+        
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                categoryLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 150,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active category link on scroll
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    categoryLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-100px 0px -100px 0px' });
+
+        categorySections.forEach(section => sectionObserver.observe(section));
+
+        // Animation on scroll
+        const productObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            productObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

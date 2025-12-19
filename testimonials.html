@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | LDJ Gold & Diamonds | Customer Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* Ratings Overview */
+        .ratings-overview {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .ratings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .rating-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #f8f8f8;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .rating-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating-card .rating-stars {
+            color: #D4AF37;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .rating-card .rating-number {
+            font-size: 48px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .rating-card .rating-source {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .rating-card .review-count {
+            color: #888;
+            font-size: 16px;
+        }
+
+        /* Customer Reviews */
+        .customer-reviews {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .reviews-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .review-tab {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .review-tab:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .review-tab.active {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 40px 35px;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-card .review-stars {
+            color: #D4AF37;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .review-card .review-text {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .review-card .review-text:before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 60px;
+            color: #D4AF37;
+            opacity: 0.2;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .reviewer-details h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .reviewer-details p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .review-date {
+            position: absolute;
+            top: 40px;
+            right: 35px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Wedding Stories */
+        .wedding-stories {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .stories-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .stories-content {
+            flex: 1;
+        }
+
+        .stories-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .stories-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .story-highlights {
+            margin-top: 40px;
+        }
+
+        .story-highlight {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 2px;
+        }
+
+        .story-highlight img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 2px;
+            margin-right: 15px;
+        }
+
+        .story-highlight-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .story-highlight-content p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .stories-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        .stories-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Video Testimonials */
+        .video-testimonials {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-play-btn:hover {
+            background: #D4AF37;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            padding: 30px;
+        }
+
+        .video-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .video-client {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #888;
+            font-size: 15px;
+        }
+
+        /* Share Your Story CTA */
+        .share-story {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .story-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .story-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        .story-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .story-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .story-step i {
+            font-size: 40px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .story-step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .story-step p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .stories-container {
+                flex-direction: column;
+            }
+            
+            .stories-image {
+                order: -1;
+                height: 400px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-filter {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .review-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .ratings-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .story-content h2 {
+                font-size: 32px;
+            }
+            
+            .story-content p {
+                font-size: 18px;
+            }
+            
+            .stories-content h2 {
+                font-size: 32px;
+            }
+            
+            .review-card {
+                padding: 30px 25px;
+            }
+            
+            .review-date {
+                position: static;
+                margin-top: 15px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html" class="active">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container page-hero-content">
+            <h1>Customer Stories & Testimonials</h1>
+            <p class="tagline">For over three generations, we've been privileged to be part of countless special moments. Read stories from our valued clients about their experiences with LDJ Gold & Diamonds.</p>
+            
+            <a href="#reviews" class="btn btn-outline">Read Customer Reviews</a>
+        </div>
+    </section>
+
+    <!-- Ratings Overview -->
+    <section class="ratings-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Ratings & Recognition</h2>
+                <p>Trusted by thousands of customers for quality, craftsmanship, and exceptional service</p>
+            </div>
+            
+            <div class="ratings-container">
+                <div class="rating-card">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating-number">4.9/5</div>
+                    <div class="rating-source">Google Reviews</div>
+                    <div class="review-count">Based on 347 reviews</div>
+                </div>
+                
+                <div class="rating-card">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-number">4.8/5</div>
+                    <div class="rating-source">Facebook Ratings</div>
+                    <div class="review-count">Based on 289 reviews</div>
+                </div>
+                
+                <div class="rating-card">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating-number">5/5</div>
+                    <div class="rating-source">WeddingWire</div>
+                    <div class="review-count">Based on 156 reviews</div>
+                </div>
+                
+                <div class="rating-card">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating-number">AAA</div>
+                    <div class="rating-source">BBB Rating</div>
+                    <div class="review-count">Accredited Since 1978</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <p>Hear directly from our clients about their experiences with our jewellery and service</p>
+            </div>
+            
+            <div class="reviews-filter">
+                <button class="review-tab active" data-category="all">All Reviews</button>
+                <button class="review-tab" data-category="engagement">Engagement Rings</button>
+                <button class="review-tab" data-category="custom">Custom Designs</button>
+                <button class="review-tab" data-category="service">Customer Service</button>
+                <button class="review-tab" data-category="repair">Repair & Service</button>
+            </div>
+            
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card" data-category="engagement">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        The engagement ring LDJ created for my fiancée is absolutely breathtaking. We worked with their designer to incorporate elements from both our families' heirlooms, and the result is a truly unique piece that tells our story. The attention to detail is incredible.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Michael R." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>Michael Richardson</h4>
+                            <p>Custom Engagement Ring</p>
+                        </div>
+                    </div>
+                    <div class="review-date">March 15, 2023</div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card" data-category="custom">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        I inherited my grandmother's necklace but wanted to redesign it into something more contemporary. LDJ did an incredible job preserving the sentimental value while creating a beautiful modern piece I wear every day. Their respect for family history is remarkable.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sarah C." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>Sarah Chen</h4>
+                            <p>Heirloom Redesign</p>
+                        </div>
+                    </div>
+                    <div class="review-date">February 28, 2023</div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card" data-category="service">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="review-text">
+                        As an Indian wedding with multiple ceremonies, we needed different jewellery for each event. LDJ helped us create a cohesive collection that honored tradition while reflecting our modern style. Their knowledge of cultural jewellery is impressive.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Priya K." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>Priya & Raj Kapoor</h4>
+                            <p>Wedding Jewellery Collection</p>
+                        </div>
+                    </div>
+                    <div class="review-date">January 12, 2023</div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card" data-category="repair">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        My wedding band needed resizing after 15 years, and LDJ handled it with care and precision. They even polished it to look brand new. It's rare to find a business that stands behind their work for so long. Truly a family business that cares.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="James W." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>James Wilson</h4>
+                            <p>Ring Resizing & Repair</p>
+                        </div>
+                    </div>
+                    <div class="review-date">December 5, 2022</div>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="review-card" data-category="engagement">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        The diamond selection process was educational and pressure-free. LDJ helped me understand the 4Cs and find a stone that balanced quality with my budget. My wife loves her ring, and I appreciate the transparent pricing and expert guidance.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="David L." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>David Lee</h4>
+                            <p>Diamond Engagement Ring</p>
+                        </div>
+                    </div>
+                    <div class="review-date">November 18, 2022</div>
+                </div>
+                
+                <!-- Review 6 -->
+                <div class="review-card" data-category="service">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        We purchased jewellery for our 25th anniversary, and the entire experience was exceptional. From the private viewing room to the detailed explanations of craftsmanship, LDJ made us feel valued. The quality is evident in every detail.
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Elena R." class="reviewer-avatar">
+                        <div class="reviewer-details">
+                            <h4>Elena & Robert Martinez</h4>
+                            <p>25th Anniversary Gift</p>
+                        </div>
+                    </div>
+                    <div class="review-date">October 30, 2022</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Stories -->
+    <section class="wedding-stories">
+        <div class="container">
+            <div class="stories-container">
+                <div class="stories-content">
+                    <h2>Real Wedding Stories</h2>
+                    <p>For over 50 years, we've been part of countless wedding celebrations. Each story is unique, but they all share the common thread of love, family, and jewellery that marks the beginning of a new chapter.</p>
+                    <p>From intimate ceremonies to grand celebrations, our jewellery has been there to symbolize commitment and celebrate union across generations.</p>
+                    
+                    <div class="story-highlights">
+                        <div class="story-highlight">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Traditional Wedding">
+                            <div class="story-highlight-content">
+                                <h4>Three-Generation Tradition</h4>
+                                <p>"My grandmother, mother, and I all purchased our wedding jewellery from LDJ. The continuity and family connection mean everything to us."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="story-highlight">
+                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Modern Wedding">
+                            <div class="story-highlight-content">
+                                <h4>Modern Fusion Wedding</h4>
+                                <p>"As an intercultural couple, LDJ helped us design pieces that honored both our backgrounds in a contemporary way."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="bridal.html" class="btn" style="margin-top: 30px;">Explore Bridal Collections</a>
+                </div>
+                <div class="stories-image">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Celebration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="video-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Video Testimonials</h2>
+                <p>Hear and see our customers share their experiences in their own words</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Engagement Story">
+                        <div class="video-play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Surprise Proposal Story</h3>
+                        <p>Michael shares how LDJ helped him design the perfect engagement ring and plan the surprise proposal.</p>
+                        <div class="video-client">
+                            <i class="far fa-user-circle"></i>
+                            <span>Michael & Sarah • 4:32 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Family Heirloom">
+                        <div class="video-play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Heirloom Redesign Journey</h3>
+                        <p>Elena walks us through the process of transforming her grandmother's jewellery into modern pieces.</p>
+                        <div class="video-client">
+                            <i class="far fa-user-circle"></i>
+                            <span>Elena Rodriguez • 6:15 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Wedding Planning">
+                        <div class="video-play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Complete Wedding Jewellery</h3>
+                        <p>Priya and Raj discuss how LDJ helped coordinate jewellery for their multi-day Indian wedding celebration.</p>
+                        <div class="video-client">
+                            <i class="far fa-user-circle"></i>
+                            <span>Priya & Raj Kapoor • 7:42 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story CTA -->
+    <section class="share-story">
+        <div class="container">
+            <div class="story-content">
+                <h2>Share Your LDJ Story</h2>
+                <p>Have a special memory or experience with LDJ Gold & Diamonds? We'd love to hear your story and feature it alongside our other customer testimonials.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="contact.html" class="btn">Share Your Story</a>
+                    <a href="index.html" class="btn btn-outline">Return to Home</a>
+                </div>
+                
+                <div class="story-steps">
+                    <div class="story-step">
+                        <i class="fas fa-comment-alt"></i>
+                        <h3>Share Your Experience</h3>
+                        <p>Tell us about your purchase, custom design, or special moment with LDJ jewellery.</p>
+                    </div>
+                    
+                    <div class="story-step">
+                        <i class="fas fa-camera"></i>
+                        <h3>Include Photos</h3>
+                        <p>Share pictures of your jewellery, special occasions, or the moment of presentation.</p>
+                    </div>
+                    
+                    <div class="story-step">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Option</h3>
+                        <p>Record a short video testimonial sharing your experience in your own words.</p>
+                    </div>
+                    
+                    <div class="story-step">
+                        <i class="fas fa-gift"></i>
+                        <h3>Receive Our Thanks</h3>
+                        <p>Featured stories receive a special thank you gift from our collection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we've been privileged to share in our customers' most special moments, creating jewellery that tells their unique stories.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Stories</h3>
+                    <ul>
+                        <li><a href="#engagement">Engagement Stories</a></li>
+                        <li><a href="#wedding">Wedding Stories</a></li>
+                        <li><a href="#heirloom">Heirloom Stories</a></li>
+                        <li><a href="#anniversary">Anniversary Stories</a></li>
+                        <li><a href="#custom">Custom Design Stories</a></li>
+                        <li><a href="#repair">Repair & Service Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="custom.html">Custom Design</a></li>
+                        <li><a href="bridal.html">Bridal</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> stories@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-7PM, Sun: 12PM-5PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | Sharing customer stories since 2000</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Reviews filtering functionality
+        const reviewTabs = document.querySelectorAll('.review-tab');
+        const reviewCards = document.querySelectorAll('.review-card');
+        
+        reviewTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                reviewTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                // Show/hide review cards based on category
+                reviewCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else if (card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Video play button functionality
+        const videoPlayButtons = document.querySelectorAll('.video-play-btn');
+        videoPlayButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // In a real implementation, this would open a modal or play a video
+                // For demo purposes, we'll show an alert
+                const videoCard = this.closest('.video-card');
+                const videoTitle = videoCard.querySelector('h3').textContent;
+                alert(`In the full website implementation, this would play: "${videoTitle}"\n\nThis is a demonstration of the testimonial video playback feature.`);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to cards and sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe rating cards, review cards, video cards, and story steps
+        document.querySelectorAll('.rating-card, .review-card, .video-card, .story-step, .story-highlight').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+
+        // Share story form simulation
+        const shareStoryButton = document.querySelector('a[href="contact.html"]');
+        if (shareStoryButton && shareStoryButton.textContent.includes('Share Your Story')) {
+            shareStoryButton.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === 'contact.html') {
+                    // Allow normal navigation
+                    return;
+                }
+                e.preventDefault();
+                // Simulate story submission process
+                alert('Thank you for wanting to share your story! Our team will contact you to discuss featuring your experience on our testimonials page.');
+            });
+        }
+    </script>
+</body>
+</html>

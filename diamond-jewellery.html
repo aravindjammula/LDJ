@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Jewellery | LDJ Gold & Diamonds | Certified Diamond Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .btn-certified {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: #fff;
+        }
+
+        .btn-certified:hover {
+            background: linear-gradient(to right, #333, #1a1a1a);
+            color: #fff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        .hero-certification {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .certification-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            backdrop-filter: blur(10px);
+        }
+
+        .certification-badge i {
+            color: #D4AF37;
+            font-size: 24px;
+        }
+
+        /* Certification Banner */
+        .certification-banner {
+            padding: 60px 0;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        .cert-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .cert-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cert-item i {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .cert-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .cert-item p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        /* Category Navigation */
+        .category-nav {
+            padding: 30px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .category-nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category-nav-link {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-nav-link:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .category-nav-link.active {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+
+        .category-nav-link i {
+            font-size: 18px;
+        }
+
+        /* Diamond Categories Section */
+        .diamond-categories {
+            padding: 80px 0 100px;
+            background-color: #fff;
+        }
+
+        .category-section {
+            margin-bottom: 100px;
+            scroll-margin-top: 150px;
+        }
+
+        .category-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-title h2 {
+            font-size: 36px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-title h2 i {
+            color: #D4AF37;
+            font-size: 30px;
+        }
+
+        .category-title a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #D4AF37;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .category-title a:hover {
+            gap: 12px;
+            color: #F4C542;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #D4AF37;
+            color: #000;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .product-card .cert-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 2px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .spec-value {
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .product-info .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-info .setting {
+            color: #D4AF37;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .product-info .price {
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* 4Cs Education Section */
+        .diamond-education {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .education-card {
+            background: #fff;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-card i {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 25px;
+        }
+
+        .education-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .education-card p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .education-card .grade-scale {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .grade-scale span {
+            display: block;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .grade-scale span strong {
+            color: #1a1a1a;
+        }
+
+        /* Diamond Certification Section */
+        .certification-details {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .cert-details-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .cert-content {
+            flex: 1;
+        }
+
+        .cert-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .cert-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cert-features {
+            margin-top: 40px;
+        }
+
+        .cert-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .cert-feature i {
+            font-size: 22px;
+            color: #D4AF37;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .cert-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 450px;
+        }
+
+        .cert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Consultation CTA */
+        .diamond-consultation {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .cert-details-container {
+                flex-direction: column;
+            }
+            
+            .cert-image {
+                order: -1;
+                height: 400px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .education-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cert-container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .category-nav {
+                top: 70px;
+            }
+            
+            .category-nav-container {
+                gap: 10px;
+            }
+            
+            .category-nav-link {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .hero-certification {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+            
+            .product-actions .btn {
+                width: 100%;
+            }
+            
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .category-title h2 {
+                font-size: 28px;
+            }
+            
+            .category-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .cta-content h2 {
+                font-size: 32px;
+            }
+            
+            .cta-content p {
+                font-size: 18px;
+            }
+            
+            .cert-content h2 {
+                font-size: 32px;
+            }
+            
+            .product-specs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Certified Diamond Jewellery</h1>
+            <p class="tagline">Each diamond in our collection is hand-selected for exceptional quality and brilliance, certified by renowned gemological institutes. Experience the timeless beauty and lasting value of ethically sourced diamonds.</p>
+            
+            <div class="hero-certification">
+                <div class="certification-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>GIA Certified Diamonds</span>
+                </div>
+                <div class="certification-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Ethically Sourced</span>
+                </div>
+                <div class="certification-badge">
+                    <i class="fas fa-gem"></i>
+                    <span>Expertly Crafted</span>
+                </div>
+            </div>
+            
+            <a href="#rings" class="btn btn-outline" style="margin-top: 40px;">Explore Collections</a>
+        </div>
+    </section>
+
+    <!-- Certification Banner -->
+    <section class="certification-banner">
+        <div class="container cert-container">
+            <div class="cert-item">
+                <i class="fas fa-microscope"></i>
+                <h3>Independently Graded</h3>
+                <p>Every diamond graded by independent gemological laboratories</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-search"></i>
+                <h3>Full Transparency</h3>
+                <p>Complete disclosure of the 4Cs: Cut, Color, Clarity, Carat</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Ethical Sourcing</h3>
+                <p>Responsibly sourced diamonds with full traceability</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Lifetime Warranty</h3>
+                <p>Comprehensive warranty on craftsmanship and materials</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="container category-nav-container">
+            <a href="#rings" class="category-nav-link active">
+                <i class="far fa-gem"></i>
+                Diamond Rings
+            </a>
+            <a href="#pendants" class="category-nav-link">
+                <i class="fas fa-gem"></i>
+                Diamond Pendants
+            </a>
+            <a href="#earrings" class="category-nav-link">
+                <i class="fas fa-star"></i>
+                Diamond Earrings
+            </a>
+            <a href="#bracelets" class="category-nav-link">
+                <i class="fas fa-link"></i>
+                Diamond Bracelets
+            </a>
+        </div>
+    </section>
+
+    <!-- Diamond Categories Section -->
+    <section class="diamond-categories">
+        <div class="container">
+            <!-- Rings Section -->
+            <div class="category-section" id="rings">
+                <div class="category-title">
+                    <h2><i class="far fa-gem"></i> Diamond Rings</h2>
+                    <a href="#rings">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Solitaire Diamond Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Solitaire Ring</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.50 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum Setting</span>
+                                <span class="price">$12,800</span>
+                            </div>
+                            <p>A timeless solitaire engagement ring featuring a brilliant round diamond in a classic six-prong platinum setting.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Halo Diamond Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halo Diamond Ring</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.25 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Very Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">White Gold</span>
+                                <span class="price">$9,450</span>
+                            </div>
+                            <p>Center diamond surrounded by a halo of smaller diamonds, creating maximum brilliance and visual impact.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Three-Stone Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Three-Stone Ring</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">2.10 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">F</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VVS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum Setting</span>
+                                <span class="price">$18,500</span>
+                            </div>
+                            <p>Symbolizing past, present, and future, this ring features three brilliant diamonds in an elegant platinum setting.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage Style Ring">
+                        </div>
+                        <div class="product-info">
+                            <h3>Vintage Style Ring</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.80 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">SI1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Very Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Rose Gold</span>
+                                <span class="price">$14,200</span>
+                            </div>
+                            <p>Inspired by Art Deco designs, this ring features intricate filigree work and milgrain detailing in rose gold.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pendants Section -->
+            <div class="category-section" id="pendants">
+                <div class="category-title">
+                    <h2><i class="fas fa-gem"></i> Diamond Pendants</h2>
+                    <a href="#pendants">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Solitaire Diamond Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Solitaire Diamond Pendant</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">0.75 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">White Gold</span>
+                                <span class="price">$3,800</span>
+                            </div>
+                            <p>Classic solitaire pendant with a brilliant round diamond, suspended from a delicate white gold chain.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Heart Shaped Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Heart Shaped Pendant</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">0.50 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">I</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">SI1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Very Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Rose Gold</span>
+                                <span class="price">$2,950</span>
+                            </div>
+                            <p>Romantic heart-shaped diamond pendant with delicate pave setting, perfect for gift-giving occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cluster Diamond Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Cluster Diamond Pendant</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.20 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G-H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS-SI</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">15</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Yellow Gold</span>
+                                <span class="price">$5,600</span>
+                            </div>
+                            <p>Cluster of brilliant diamonds arranged in a floral pattern, creating exceptional sparkle and visual appeal.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Pear Shaped Pendant">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pear Shaped Pendant</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">0.90 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">F</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VVS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum</span>
+                                <span class="price">$6,800</span>
+                            </div>
+                            <p>Elegant pear-shaped diamond pendant with brilliant cut, suspended from a delicate platinum chain.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Earrings Section -->
+            <div class="category-section" id="earrings">
+                <div class="category-title">
+                    <h2><i class="fas fa-star"></i> Diamond Earrings</h2>
+                    <a href="#earrings">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diamond Stud Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Diamond Studs</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.00 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum</span>
+                                <span class="price">$6,500</span>
+                            </div>
+                            <p>Timeless diamond stud earrings with four-prong settings, perfect for everyday elegance and special occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diamond Hoop Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Hoop Earrings</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">2.50 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">H-I</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">SI1-SI2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">48</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">White Gold</span>
+                                <span class="price">$8,900</span>
+                            </div>
+                            <p>Full circle of brilliant diamonds set in white gold hoops, creating continuous sparkle and movement.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Drop Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pear Drop Earrings</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">3.20 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">F</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VVS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cut:</span>
+                                    <span class="spec-value">Excellent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum</span>
+                                <span class="price">$22,500</span>
+                            </div>
+                            <p>Elegant pear-shaped diamond drop earrings with brilliant cuts, perfect for formal occasions and red carpet events.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Huggie Earrings">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Huggies</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">1.80 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G-H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS-SI</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">32</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Yellow Gold</span>
+                                <span class="price">$7,200</span>
+                            </div>
+                            <p>Comfortable huggie earrings with a continuous line of diamonds, perfect for day-to-night wear.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bracelets Section -->
+            <div class="category-section" id="bracelets">
+                <div class="category-title">
+                    <h2><i class="fas fa-link"></i> Diamond Bracelets</h2>
+                    <a href="#bracelets">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tennis Bracelet">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Tennis Bracelet</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">5.00 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G-H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS-SI</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">45</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Platinum</span>
+                                <span class="price">$18,500</span>
+                            </div>
+                            <p>Timeless tennis bracelet with a continuous line of brilliant diamonds in a secure platinum setting.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bangle Bracelet">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Bangle Bracelet</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">3.50 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">SI1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">28</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">White Gold</span>
+                                <span class="price">$12,800</span>
+                            </div>
+                            <p>Solid bangle bracelet with a line of brilliant diamonds, featuring a secure hinge and clasp mechanism.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="cert-badge">GIA Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Charm Bracelet">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Charm Bracelet</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">2.80 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">G-H</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS-SI</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">18</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Rose Gold</span>
+                                <span class="price">$9,600</span>
+                            </div>
+                            <p>Delicate chain bracelet with interchangeable diamond charms, allowing for personalization and versatility.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="certifications.html" class="btn btn-small btn-certified">View Certification</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="cert-badge">IGI Certified</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cuff Bracelet">
+                        </div>
+                        <div class="product-info">
+                            <h3>Diamond Cuff Bracelet</h3>
+                            
+                            <div class="product-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Carat:</span>
+                                    <span class="spec-value">4.20 ct</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Color:</span>
+                                    <span class="spec-value">F-G</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Clarity:</span>
+                                    <span class="spec-value">VS1-VS2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Total Diamonds:</span>
+                                    <span class="spec-value">22</span>
+                                </div>
+                            </div>
+                            
+                            <div class="product-meta">
+                                <span class="setting">Yellow Gold</span>
+                                <span class="price">$16,500</span>
+                            </div>
+                            <p>Bold cuff bracelet with geometric diamond settings, making a strong fashion statement for special occasions.</p>
+                            <div class="product-actions">
+                                <a href="product-details.html" class="btn btn-small">View Details</a>
+                                <a href="contact.html" class="btn btn-small btn-outline">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4Cs Education Section -->
+    <section class="diamond-education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Understanding Diamond Quality</h2>
+                <p>The 4Cs—Cut, Color, Clarity, and Carat—are the universal standards for evaluating diamond quality. Learn how these factors determine a diamond's beauty and value.</p>
+            </div>
+            
+            <div class="education-container">
+                <div class="education-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Cut</h3>
+                    <p>The most important factor affecting a diamond's brilliance. A well-cut diamond reflects light beautifully, creating exceptional sparkle and fire.</p>
+                    <div class="grade-scale">
+                        <span><strong>Scale:</strong> Excellent to Poor</span>
+                        <span><strong>Our Standard:</strong> Very Good to Excellent</span>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Color</h3>
+                    <p>Measures a diamond's lack of color. Truly colorless diamonds are rare and highly valued, while subtle tints can affect value.</p>
+                    <div class="grade-scale">
+                        <span><strong>Scale:</strong> D (Colorless) to Z</span>
+                        <span><strong>Our Range:</strong> D to J</span>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Clarity</h3>
+                    <p>Refers to the absence of inclusions and blemishes. Fewer imperfections mean higher clarity and greater value.</p>
+                    <div class="grade-scale">
+                        <span><strong>Scale:</strong> Flawless to Included</span>
+                        <span><strong>Our Range:</strong> IF to SI2</span>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <i class="fas fa-weight-hanging"></i>
+                    <h3>Carat</h3>
+                    <p>The unit of weight for diamonds. Larger diamonds are rarer, but cut, color, and clarity also significantly impact beauty and value.</p>
+                    <div class="grade-scale">
+                        <span><strong>Unit:</strong> Carats (ct)</span>
+                        <span><strong>Our Range:</strong> 0.25ct to 10+ ct</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diamond Certification Section -->
+    <section class="certification-details">
+        <div class="container">
+            <div class="cert-details-container">
+                <div class="cert-content">
+                    <h2>Our Certification Standards</h2>
+                    <p>Every diamond in our collection over 0.50 carats comes with certification from internationally recognized gemological laboratories. These documents provide an unbiased assessment of the diamond's characteristics.</p>
+                    <p>We work primarily with GIA (Gemological Institute of America) and IGI (International Gemological Institute), the most respected names in diamond grading. Each certificate includes a detailed analysis of the 4Cs, along with diagrams showing inclusions and proportions.</p>
+                    
+                    <div class="cert-features">
+                        <div class="cert-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Independent Verification</h3>
+                                <p>Third-party certification ensures objective, unbiased grading of every diamond's quality characteristics.</p>
+                            </div>
+                        </div>
+                        <div class="cert-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Full Disclosure</h3>
+                                <p>Complete transparency about diamond characteristics, treatments, and enhancements if applicable.</p>
+                            </div>
+                        </div>
+                        <div class="cert-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Security Features</h3>
+                                <p>Certificates include security holograms and unique identification numbers to prevent fraud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="certifications.html" class="btn" style="margin-top: 30px;">Learn About Certifications</a>
+                </div>
+                <div class="cert-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diamond Certification">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="diamond-consultation">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Find Your Perfect Diamond</h2>
+                <p>Our certified diamond specialists are here to guide you through the selection process, helping you understand the 4Cs and choose a diamond that balances quality, beauty, and value according to your preferences and budget.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="contact.html" class="btn">Book a Consultation</a>
+                    <a href="certifications.html" class="btn btn-outline">Learn About Certifications</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we have provided certified diamond jewellery of exceptional quality, combining traditional craftsmanship with modern certification standards.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Diamond Collections</h3>
+                    <ul>
+                        <li><a href="#rings">Diamond Rings</a></li>
+                        <li><a href="#pendants">Diamond Pendants</a></li>
+                        <li><a href="#earrings">Diamond Earrings</a></li>
+                        <li><a href="#bracelets">Diamond Bracelets</a></li>
+                        <li><a href="custom.html">Custom Diamond Designs</a></li>
+                        <li><a href="bridal.html">Bridal Diamonds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Certifications & Info</h3>
+                    <ul>
+                        <li><a href="certifications.html">Diamond Certifications</a></li>
+                        <li><a href="#education">Understanding the 4Cs</a></li>
+                        <li><a href="#">Diamond Care Guide</a></li>
+                        <li><a href="#">Ethical Sourcing</a></li>
+                        <li><a href="#">Investment Diamonds</a></li>
+                        <li><a href="#">Insurance & Appraisal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> diamonds@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-7PM, Sun: 12PM-5PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | All diamonds are certified and ethically sourced</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Category navigation functionality
+        const categoryLinks = document.querySelectorAll('.category-nav-link');
+        const categorySections = document.querySelectorAll('.category-section');
+        
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                categoryLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Scroll to the target section
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 150,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active category link on scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -100px 0px'
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    categoryLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe category sections
+        categorySections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement && !this.classList.contains('category-nav-link')) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to product cards on scroll
+        const productObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe product cards
+        document.querySelectorAll('.product-card, .education-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            productObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

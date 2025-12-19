@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LDJ Gold & Diamonds | Family Legacy Since 1965</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Content */
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* Company History */
+        .company-history {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .history-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .history-content {
+            flex: 1;
+        }
+
+        .history-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .history-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .history-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #D4AF37;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #D4AF37;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .timeline-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .mv-card {
+            background: #fff;
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .mv-card i {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 30px;
+        }
+
+        .mv-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .mv-card p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Craftsmanship Section */
+        .craftsmanship {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .craftsmanship-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .craftsmanship-text {
+            flex: 1;
+        }
+
+        .craftsmanship-text h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .craftsmanship-text p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .craftsmanship-features {
+            margin-top: 40px;
+        }
+
+        .craftsmanship-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .craftsmanship-feature i {
+            font-size: 22px;
+            color: #D4AF37;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .craftsmanship-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        .craftsmanship-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 100px 0;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .choose-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 2px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .choose-card:hover {
+            transform: translateY(-10px);
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .choose-card i {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 25px;
+        }
+
+        .choose-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .choose-card p {
+            color: #ccc;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .about-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .history-container, .craftsmanship-content {
+                flex-direction: column;
+            }
+            
+            .history-image, .craftsmanship-image {
+                order: -1;
+                height: 400px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .mv-grid, .choose-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline-year {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .history-content h2, .craftsmanship-text h2 {
+                font-size: 32px;
+            }
+            
+            .cta-content h2 {
+                font-size: 32px;
+            }
+            
+            .cta-content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Our Story & Legacy</h1>
+            <p class="tagline">For over three generations, LDJ Gold & Diamonds has been synonymous with exceptional craftsmanship, timeless design, and unwavering integrity in the world of fine jewellery.</p>
+            <a href="#history" class="btn btn-outline">Discover Our Journey</a>
+        </div>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="company-history" id="history">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Heritage</h2>
+                <p>A family legacy of excellence in jewellery craftsmanship that spans over half a century</p>
+            </div>
+            
+            <div class="history-container">
+                <div class="history-content">
+                    <h2>Three Generations of Master Craftsmanship</h2>
+                    <p>Founded in 1965 by Louis D. Johnson, our story began in a small workshop in New York's Diamond District. With nothing but his exceptional skill, a passion for perfection, and a vision to create jewellery that would stand the test of time, Louis laid the foundation for what would become a family legacy.</p>
+                    <p>Louis believed that jewellery should tell a story—not just of the materials and craftsmanship, but of the moments and people it represents. This philosophy became the cornerstone of our business, guiding every piece we create to this day.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1965</div>
+                            <div class="timeline-content">
+                                <h3>The Beginning</h3>
+                                <p>Louis D. Johnson establishes LDJ Gold & Diamonds in a small workshop, specializing in custom engagement rings and heirloom redesigns.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1982</div>
+                            <div class="timeline-content">
+                                <h3>Second Generation</h3>
+                                <p>Louis's son, Michael Johnson, joins the business, bringing modern design sensibilities while preserving traditional craftsmanship techniques.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2005</div>
+                            <div class="timeline-content">
+                                <h3>Third Generation</h3>
+                                <p>Sophia Johnson, Louis's granddaughter, becomes Creative Director, blending contemporary design with the family's legacy of excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage Jewellery Workshop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Guiding Principles</h2>
+                <p>The values that have guided our family business for over 50 years</p>
+            </div>
+            
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To create exquisite, heirloom-quality jewellery that celebrates life's most significant moments while upholding the highest standards of craftsmanship, ethical sourcing, and personalized service that our family has maintained for generations.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted name in fine jewellery, recognized globally for our uncompromising quality, timeless designs, and commitment to preserving the art of traditional jewellery making for future generations.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Our Values</h3>
+                    <p>Integrity in every transaction, excellence in every detail, respect for tradition while embracing innovation, and a deep commitment to our clients' satisfaction and trust that extends far beyond the initial purchase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship & Purity Promise -->
+    <section class="craftsmanship">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Craftsmanship Promise</h2>
+                <p>Every piece is a testament to our commitment to excellence in materials and craftsmanship</p>
+            </div>
+            
+            <div class="craftsmanship-content">
+                <div class="craftsmanship-text">
+                    <h2>Uncompromising Quality & Purity</h2>
+                    <p>At LDJ Gold & Diamonds, we believe that true luxury lies in the details. That's why we source only the finest materials and employ master artisans who combine traditional techniques with modern precision.</p>
+                    
+                    <div class="craftsmanship-features">
+                        <div class="craftsmanship-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Ethically Sourced Materials</h3>
+                                <p>We partner with certified suppliers who adhere to the highest ethical standards for mining and sourcing of all precious metals and gemstones.</p>
+                            </div>
+                        </div>
+                        <div class="craftsmanship-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Master Artisans</h3>
+                                <p>Our craftsmen undergo years of rigorous training, many learning traditional techniques passed down through generations of jewellers.</p>
+                            </div>
+                        </div>
+                        <div class="craftsmanship-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Rigorous Quality Control</h3>
+                                <p>Every piece undergoes multiple quality inspections before leaving our workshop, ensuring it meets our exacting standards.</p>
+                            </div>
+                        </div>
+                        <div class="craftsmanship-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Certification & Documentation</h3>
+                                <p>All diamonds over 0.5 carats and colored gemstones come with certification from reputable gemological laboratories.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="collections.html" class="btn" style="margin-top: 30px;">Explore Our Collections</a>
+                </div>
+                <div class="craftsmanship-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jewellery Crafting Process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose LDJ -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: #fff;">Why Choose LDJ Gold & Diamonds</h2>
+                <p style="color: #ccc;">What sets us apart in a world of mass-produced jewellery</p>
+            </div>
+            
+            <div class="choose-grid">
+                <div class="choose-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Family-Owned & Operated</h3>
+                    <p>As a third-generation family business, we provide personalized service and attention to detail that corporate jewellers simply cannot match.</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Lifetime Client Relationships</h3>
+                    <p>We build relationships that last generations. Many of our clients are children and grandchildren of our original customers.</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Comprehensive Services</h3>
+                    <p>From custom design and jewellery repair to appraisal and insurance assistance, we offer complete care for your precious pieces.</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Expert Guidance</h3>
+                    <p>Our team includes GIA-certified gemologists who provide expert advice to help you make informed decisions about your jewellery.</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Ethical Commitment</h3>
+                    <p>We are committed to responsible sourcing and sustainability, ensuring our beautiful creations don't come at the expense of people or planet.</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Lifetime Warranty</h3>
+                    <p>Every piece comes with our comprehensive lifetime warranty, covering craftsmanship and materials for as long as you own it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Experience the LDJ Difference</h2>
+                <p>Discover why generations of clients have trusted LDJ Gold & Diamonds for their most precious jewellery needs. Visit our showroom or schedule a private consultation to experience our commitment to excellence firsthand.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="contact.html" class="btn">Schedule a Consultation</a>
+                    <a href="index.html" class="btn btn-outline">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we have created exquisite jewellery that celebrates life's most precious moments with timeless elegance and superior craftsmanship.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="custom.html">Custom Design</a></li>
+                        <li><a href="bridal.html">Bridal Collection</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Jewellery Repair</a></li>
+                        <li><a href="#">Stone Replacement</a></li>
+                        <li><a href="#">Valuation & Appraisal</a></li>
+                        <li><a href="#">Custom Design</a></li>
+                        <li><a href="#">Engagement Ring Consultation</a></li>
+                        <li><a href="#">Lifetime Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-7PM, Sun: 12PM-5PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #D4AF37;"></i> for three generations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add subtle animation to timeline items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

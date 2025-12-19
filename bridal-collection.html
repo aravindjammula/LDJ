@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Jewellery | LDJ Gold & Diamonds | Wedding Collections Since 1965</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-romantic {
+            background: linear-gradient(to right, #e75480, #ff6b9d);
+            color: #fff;
+        }
+
+        .btn-romantic:hover {
+            background: linear-gradient(to right, #ff6b9d, #e75480);
+            color: #fff;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        .hero-romantic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .romantic-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            backdrop-filter: blur(10px);
+        }
+
+        .romantic-badge i {
+            color: #ff6b9d;
+            font-size: 24px;
+        }
+
+        /* Bridal Promise Banner */
+        .bridal-promise {
+            padding: 60px 0;
+            background-color: #fff9fb;
+            color: #333;
+        }
+
+        .promise-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .promise-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .promise-item i {
+            font-size: 48px;
+            color: #e75480;
+            margin-bottom: 20px;
+        }
+
+        .promise-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .promise-item p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Bridal Collections */
+        .bridal-collections {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .collection-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .collection-tab {
+            padding: 15px 30px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 18px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .collection-tab:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .collection-tab.active {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .collection-card {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .collection-card .collection-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e75480;
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .collection-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .collection-info {
+            padding: 25px;
+        }
+
+        .collection-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .collection-info .collection-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .collection-info .style {
+            color: #D4AF37;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .collection-info .price-range {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .collection-info p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .collection-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Wedding Highlights */
+        .wedding-highlights {
+            padding: 100px 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .highlight-card {
+            background: #fff;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card i {
+            font-size: 48px;
+            color: #e75480;
+            margin-bottom: 25px;
+        }
+
+        .highlight-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .highlight-card p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card .highlight-details {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .highlight-details span {
+            display: block;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .highlight-details span strong {
+            color: #1a1a1a;
+        }
+
+        /* Real Brides Section */
+        .real-brides {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .brides-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .brides-content {
+            flex: 1;
+        }
+
+        .brides-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .brides-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .bride-stories {
+            margin-top: 40px;
+        }
+
+        .bride-story {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .bride-story img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .bride-story-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .bride-story-content p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .brides-image {
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        .brides-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Consultation CTA */
+        .bridal-consultation {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .consultation-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .consultation-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        .consultation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .consultation-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .consultation-step .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #D4AF37;
+            color: #000;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .consultation-step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .consultation-step p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .brides-container {
+                flex-direction: column;
+            }
+            
+            .brides-image {
+                order: -1;
+                height: 400px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+            
+            .collections-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .highlights-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .consultation-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero-romantic {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .collection-actions {
+                flex-direction: column;
+            }
+            
+            .collection-actions .btn {
+                width: 100%;
+            }
+            
+            .highlights-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .consultation-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .collection-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .collection-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .consultation-content h2 {
+                font-size: 32px;
+            }
+            
+            .consultation-content p {
+                font-size: 18px;
+            }
+            
+            .brides-content h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal-jewellery.html" class="active">Bridal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Bridal Jewellery Collections</h1>
+            <p class="tagline">For over three generations, we've been helping brides find their perfect wedding jewellery—pieces that symbolize love, commitment, and the beginning of your forever story. Your dream wedding jewellery awaits.</p>
+            
+            <div class="hero-romantic">
+                <div class="romantic-badge">
+                    <i class="fas fa-heart"></i>
+                    <span>Heirloom Quality</span>
+                </div>
+                <div class="romantic-badge">
+                    <i class="fas fa-ring"></i>
+                    <span>Custom Designs</span>
+                </div>
+                <div class="romantic-badge">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Wedding Timeline Planning</span>
+                </div>
+            </div>
+            
+            <a href="#consultation" class="btn btn-romantic" style="margin-top: 40px;">Book Bridal Consultation</a>
+        </div>
+    </section>
+
+    <!-- Bridal Promise Banner -->
+    <section class="bridal-promise">
+        <div class="container promise-container">
+            <div class="promise-item">
+                <i class="fas fa-heart"></i>
+                <h3>Personalized Experience</h3>
+                <p>One-on-one consultations tailored to your wedding vision and style</p>
+            </div>
+            <div class="promise-item">
+                <i class="fas fa-clock"></i>
+                <h3>Wedding Timeline</h3>
+                <p>Guidance on when to shop for each piece in your wedding journey</p>
+            </div>
+            <div class="promise-item">
+                <i class="fas fa-gem"></i>
+                <h3>Heirloom Quality</h3>
+                <p>Jewellery crafted to be treasured and passed down through generations</p>
+            </div>
+            <div class="promise-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Stress-Free Process</h3>
+                <p>Expert guidance from selection to wedding day delivery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridal Collections -->
+    <section class="bridal-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bridal Collections</h2>
+                <p>Explore our curated bridal collections, each designed to complement different wedding styles and personal aesthetics</p>
+            </div>
+            
+            <div class="collection-tabs">
+                <button class="collection-tab active" data-collection="all">All Collections</button>
+                <button class="collection-tab" data-collection="engagement">Engagement Rings</button>
+                <button class="collection-tab" data-collection="wedding">Wedding Bands</button>
+                <button class="collection-tab" data-collection="bridal">Bridal Sets</button>
+                <button class="collection-tab" data-collection="traditional">Traditional</button>
+            </div>
+            
+            <div class="collections-grid">
+                <!-- Engagement Rings -->
+                <div class="collection-card" data-collection="engagement">
+                    <div class="collection-badge">Most Popular</div>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Solitaire Engagement Ring">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Classic Solitaire</h3>
+                        <div class="collection-meta">
+                            <span class="style">Timeless Elegance</span>
+                            <span class="price-range">$5,800 - $25,000+</span>
+                        </div>
+                        <p>A timeless solitaire engagement ring with exceptional diamond quality and craftsmanship. The perfect symbol of your love story.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="custom.html" class="btn btn-small btn-outline">Customize</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wedding Bands -->
+                <div class="collection-card" data-collection="wedding">
+                    <div class="collection-badge">New</div>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Eternity Wedding Band">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Eternity Bands</h3>
+                        <div class="collection-meta">
+                            <span class="style">Continuous Love</span>
+                            <span class="price-range">$2,500 - $12,000</span>
+                        </div>
+                        <p>Full or half eternity bands symbolizing never-ending love. Available in various diamond sizes and metal choices.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="contact.html" class="btn btn-small btn-outline">Try On</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bridal Sets -->
+                <div class="collection-card" data-collection="bridal">
+                    <div class="collection-badge">Popular</div>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Three-Stone Bridal Set">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Three-Stone Sets</h3>
+                        <div class="collection-meta">
+                            <span class="style">Past, Present, Future</span>
+                            <span class="price-range">$8,500 - $35,000</span>
+                        </div>
+                        <p>Matching engagement ring and wedding band sets featuring three stones symbolizing your journey together.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="custom.html" class="btn btn-small btn-outline">Design Yours</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Traditional Collection -->
+                <div class="collection-card" data-collection="traditional">
+                    <div class="collection-badge">Heritage</div>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Traditional Bridal Set">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Heritage Collection</h3>
+                        <div class="collection-meta">
+                            <span class="style">Cultural Elegance</span>
+                            <span class="price-range">$3,500 - $18,000</span>
+                        </div>
+                        <p>Traditional bridal jewellery with cultural motifs and craftsmanship passed down through generations.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="contact.html" class="btn btn-small btn-outline">Consultation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Halo Collection -->
+                <div class="collection-card" data-collection="engagement">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Halo Engagement Ring">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Halo Collection</h3>
+                        <div class="collection-meta">
+                            <span class="style">Maximum Sparkle</span>
+                            <span class="price-range">$6,500 - $28,000</span>
+                        </div>
+                        <p>Center stone surrounded by a halo of smaller diamonds for exceptional brilliance and visual impact.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="custom.html" class="btn btn-small btn-outline">Customize</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modern Bands -->
+                <div class="collection-card" data-collection="wedding">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Wedding Band">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Modern Bands</h3>
+                        <div class="collection-meta">
+                            <span class="style">Contemporary Design</span>
+                            <span class="price-range">$1,800 - $9,500</span>
+                        </div>
+                        <p>Contemporary wedding bands with unique textures, mixed metals, and modern design elements.</p>
+                        <div class="collection-actions">
+                            <a href="product-details.html" class="btn btn-small">View Collection</a>
+                            <a href="contact.html" class="btn btn-small btn-outline">Try On</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Highlights -->
+    <section class="wedding-highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Wedding Journey</h2>
+                <p>From the proposal to your first anniversary, we're here to help you choose jewellery for every milestone</p>
+            </div>
+            
+            <div class="highlights-container">
+                <div class="highlight-card">
+                    <i class="fas fa-ring"></i>
+                    <h3>Engagement Ring</h3>
+                    <p>The first symbol of your commitment. Typically selected 6-12 months before the wedding.</p>
+                    <div class="highlight-details">
+                        <span><strong>Timeline:</strong> 6-12 months before</span>
+                        <span><strong>Focus:</strong> Center stone & setting</span>
+                        <span><strong>Budget:</strong> 2-3 months' salary</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Wedding Bands</h3>
+                    <p>Symbols of eternal love exchanged during your ceremony. Selected 3-6 months before the wedding.</p>
+                    <div class="highlight-details">
+                        <span><strong>Timeline:</strong> 3-6 months before</span>
+                        <span><strong>Focus:</strong> Comfort & pairing</span>
+                        <span><strong>Budget:</strong> 10-15% of engagement</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Bridal Accessories</h3>
+                    <p>Earrings, necklaces, and other pieces to complete your wedding day look. Selected 2-4 months before.</p>
+                    <div class="highlight-details">
+                        <span><strong>Timeline:</strong> 2-4 months before</span>
+                        <span><strong>Focus:</strong> Complementing dress</span>
+                        <span><strong>Budget:</strong> Varies by piece</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Gift Jewellery</h3>
+                    <p>Meaningful gifts for each other, wedding party, and family members to commemorate the occasion.</p>
+                    <div class="highlight-details">
+                        <span><strong>Timeline:</strong> 1-3 months before</span>
+                        <span><strong>Focus:</strong> Sentimental value</span>
+                        <span><strong>Budget:</strong> Personal choice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Brides Section -->
+    <section class="real-brides">
+        <div class="container">
+            <div class="brides-container">
+                <div class="brides-content">
+                    <h2>Stories From Our Brides</h2>
+                    <p>For over 50 years, we've been part of countless love stories. Here's what some of our brides have to say about their experience with LDJ Gold & Diamonds.</p>
+                    
+                    <div class="bride-stories">
+                        <div class="bride-story">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sarah M.">
+                            <div class="bride-story-content">
+                                <h4>Sarah & Michael</h4>
+                                <p>"The custom engagement ring LDJ created exceeded all my expectations. Michael worked with their designers to incorporate elements from both our families' heirlooms. It's truly one-of-a-kind."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bride-story">
+                            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Priya K.">
+                            <div class="bride-story-content">
+                                <h4>Priya & Raj</h4>
+                                <p>"As an Indian wedding with multiple ceremonies, we needed different jewellery for each event. LDJ helped us create a cohesive collection that honored tradition while reflecting our modern style."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bride-story">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Elena R.">
+                            <div class="bride-story-content">
+                                <h4>Elena & James</h4>
+                                <p>"I inherited my grandmother's diamond but wanted a new setting. LDJ redesigned it into a beautiful modern ring while preserving the sentimental value. It was the perfect something old and new."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="testimonials.html" class="btn" style="margin-top: 30px;">Read More Stories</a>
+                </div>
+                <div class="brides-image">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Happy Bride">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="bridal-consultation" id="consultation">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>Begin Your Bridal Journey</h2>
+                <p>Your wedding jewellery should be as unique as your love story. Schedule a personalized consultation with our bridal specialists to explore options, understand timelines, and create pieces you'll cherish forever.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="contact.html" class="btn btn-romantic">Book Consultation</a>
+                    <a href="custom.html" class="btn btn-outline">Start Custom Design</a>
+                </div>
+                
+                <div class="consultation-steps">
+                    <div class="consultation-step">
+                        <div class="step-number">1</div>
+                        <h3>Initial Consultation</h3>
+                        <p>Discuss your vision, timeline, and budget with our bridal specialists</p>
+                    </div>
+                    <div class="consultation-step">
+                        <div class="step-number">2</div>
+                        <h3>Design & Selection</h3>
+                        <p>Explore options, try on pieces, and finalize your selections</p>
+                    </div>
+                    <div class="consultation-step">
+                        <div class="step-number">3</div>
+                        <h3>Creation Process</h3>
+                        <p>We craft your jewellery with meticulous attention to detail</p>
+                    </div>
+                    <div class="consultation-step">
+                        <div class="step-number">4</div>
+                        <h3>Final Fitting</h3>
+                        <p>Perfect fit and final adjustments before your special day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we've helped couples celebrate their love with heirloom-quality wedding jewellery that tells their unique story.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Bridal Services</h3>
+                    <ul>
+                        <li><a href="contact.html">Bridal Consultation</a></li>
+                        <li><a href="custom.html">Custom Engagement Rings</a></li>
+                        <li><a href="#wedding">Wedding Band Selection</a></li>
+                        <li><a href="#bridal">Bridal Accessories</a></li>
+                        <li><a href="#traditional">Traditional Jewellery</a></li>
+                        <li><a href="#gifts">Wedding Party Gifts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Wedding Resources</h3>
+                    <ul>
+                        <li><a href="#timeline">Wedding Jewellery Timeline</a></li>
+                        <li><a href="#budget">Budget Planning Guide</a></li>
+                        <li><a href="#heirloom">Heirloom Redesign Services</a></li>
+                        <li><a href="#insurance">Jewellery Insurance</a></li>
+                        <li><a href="#care">Post-Wedding Care</a></li>
+                        <li><a href="testimonials.html">Real Bride Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> bridal@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Bridal Appointments: Tue-Sat 10AM-6PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | Celebrating love stories since 1965</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Collection tabs functionality
+        const collectionTabs = document.querySelectorAll('.collection-tab');
+        const collectionCards = document.querySelectorAll('.collection-card');
+        
+        collectionTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                collectionTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const collection = this.getAttribute('data-collection');
+                
+                // Show/hide collection cards based on collection
+                collectionCards.forEach(card => {
+                    if (collection === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else if (card.getAttribute('data-collection') === collection) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to collection cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe collection cards and highlight cards
+        document.querySelectorAll('.collection-card, .highlight-card, .consultation-step').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

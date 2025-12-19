@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Jewellery Collection | LDJ Gold & Diamonds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base Styles --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cormorant Garamond', 'Playfair Display', serif; }
+        body { color: #333; background-color: #fefefe; line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 0.5px; color: #1a1a1a; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Buttons --- */
+        .btn { display: inline-block; background: linear-gradient(to right, #D4AF37, #F4C542); color: #000; padding: 12px 30px; border: none; border-radius: 2px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.3s ease; text-align: center; }
+        .btn:hover { background: linear-gradient(to right, #F4C542, #D4AF37); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+        .btn-outline { background: transparent; border: 1px solid #D4AF37; color: #D4AF37; padding: 12px 30px; text-transform: uppercase; font-weight: 600; font-size: 14px; cursor: pointer; text-align: center; }
+        .btn-outline:hover { background: #D4AF37; color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); }
+        .btn-small { padding: 10px 20px; font-size: 13px; }
+
+        /* --- Header & Nav --- */
+        header { background-color: rgba(0, 0, 0, 0.95); color: #fff; position: fixed; width: 100%; z-index: 1000; padding: 20px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3); transition: all 0.3s ease; }
+        header.scrolled { padding: 15px 0; background-color: rgba(0, 0, 0, 0.98); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; color: #D4AF37; letter-spacing: 2px; display: flex; align-items: center; }
+        .logo span { color: #fff; margin-left: 5px; }
+        .logo-icon { font-size: 22px; margin-right: 10px; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 35px; position: relative; }
+        nav ul li a { font-size: 16px; letter-spacing: 1px; padding: 5px 0; font-weight: 400; position: relative; }
+        nav ul li a:after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #D4AF37; transition: width 0.3s ease; }
+        nav ul li a:hover:after, nav ul li a.active:after { width: 100%; }
+        nav ul li a:hover, nav ul li a.active { color: #D4AF37; }
+        .mobile-menu-btn { display: none; font-size: 24px; color: #D4AF37; cursor: pointer; }
+
+        /* --- Hero --- */
+        .page-hero { height: 65vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1594301980649-16a8047900c4?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center 20%; background-attachment: fixed; color: #fff; display: flex; align-items: center; text-align: center; padding-top: 80px; }
+        .page-hero-content { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .page-hero h1 { font-size: 64px; color: #fff; margin-bottom: 25px; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .page-hero .tagline { font-size: 22px; margin-bottom: 40px; color: #f0f0f0; font-weight: 300; letter-spacing: 1px; }
+
+        /* --- Category Nav --- */
+        .category-nav { padding: 20px 0; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 80px; z-index: 900; }
+        .category-nav-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .category-nav-link { padding: 10px 25px; border: 1px solid #ddd; color: #666; border-radius: 2px; display: flex; align-items: center; gap: 8px; transition: all 0.3s; }
+        .category-nav-link:hover, .category-nav-link.active { border-color: #D4AF37; color: #D4AF37; background: #fffcf5; }
+        .category-nav-link.active { border-bottom: 3px solid #D4AF37; }
+
+        /* --- Products Grid --- */
+        .bridal-categories { padding: 80px 0; background: #fdfdfd; }
+        .category-section { margin-bottom: 100px; scroll-margin-top: 160px; }
+        .category-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .category-title h2 { font-size: 36px; color: #1a1a1a; display: flex; align-items: center; gap: 15px; }
+        .category-title h2 i { color: #D4AF37; font-size: 28px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
+        
+        .product-card { background: #fff; border-radius: 2px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative; border: 1px solid #eee; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: #D4AF37; }
+        .product-card .product-badge { position: absolute; top: 15px; left: 15px; background: #D4AF37; color: #000; padding: 5px 12px; font-size: 11px; text-transform: uppercase; font-weight: 600; z-index: 2; border-radius: 2px; letter-spacing: 1px; }
+        
+        .product-image { height: 350px; overflow: hidden; background: #f9f9f9; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .product-card:hover img { transform: scale(1.08); }
+        
+        .product-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+        .product-info h3 { font-size: 24px; margin-bottom: 15px; color: #1a1a1a; }
+        
+        .product-meta { margin-bottom: 15px; font-size: 14px; color: #666; background: #f8f8f8; padding: 10px; border-radius: 2px; }
+        .product-meta span { display: block; margin-bottom: 5px; }
+        .product-meta span:last-child { margin-bottom: 0; }
+        .product-meta strong { color: #333; font-weight: 600; }
+
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 15px; border-top: 1px solid #eee; margin-bottom: 15px; }
+        .price { font-weight: 600; color: #1a1a1a; font-size: 22px; }
+        
+        .product-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        /* --- Footer --- */
+        footer { background-color: #000; color: #aaa; padding: 80px 0 30px; }
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; margin-bottom: 50px; }
+        .footer-col h3 { color: #D4AF37; font-size: 22px; margin-bottom: 25px; position: relative; padding-bottom: 10px; }
+        .footer-col h3:after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 1px; background: #D4AF37; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a:hover { color: #D4AF37; padding-left: 5px; }
+        .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+        .social-icons a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #222; color: #D4AF37; transition: all 0.3s ease; }
+        .social-icons a:hover { background: #D4AF37; color: #000; }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid #222; color: #777; font-size: 15px; }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav { position: fixed; top: 80px; left: 0; width: 100%; background: rgba(0,0,0,0.98); padding: 20px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.4s ease; }
+            nav.active { transform: translateY(0); opacity: 1; visibility: visible; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 15px 0; }
+            .category-nav { top: 70px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 42px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><i class="fas fa-gem logo-icon"></i> LDJ <span>Gold & Diamonds</span></a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom.html">Custom Design</a></li>
+                    <li><a href="bridal-jewellery.html" class="active">Bridal</a></li>
+                    <li><a href="vintage-gold.html">Vintage Gold</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Bridal Jewellery Collection</h1>
+            <p class="tagline">Celebrating love with timeless elegance. From stunning engagement rings to complete wedding sets, discover pieces crafted for your special day.</p>
+        </div>
+    </section>
+
+    <section class="category-nav">
+        <div class="container category-nav-container">
+            <a href="#sets" class="category-nav-link active"><i class="fas fa-layer-group"></i> Bridal Sets</a>
+            <a href="#engagement" class="category-nav-link"><i class="far fa-gem"></i> Engagement Rings</a>
+            <a href="#wedding" class="category-nav-link"><i class="fas fa-ring"></i> Wedding Bands</a>
+        </div>
+    </section>
+
+    <section class="bridal-categories">
+        <div class="container">
+            
+            <div class="category-section" id="sets">
+                <div class="category-title">
+                    <h2><i class="fas fa-layer-group"></i> Complete Bridal Sets</h2>
+                    <a href="#">View All Sets <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div id="bridal-sets-grid" class="products-grid">
+                    <p style="grid-column: 1/-1; text-align: center;">Loading Bridal Sets...</p>
+                </div>
+            </div>
+
+            <div class="category-section" id="engagement">
+                <div class="category-title">
+                    <h2><i class="far fa-gem"></i> Engagement Rings</h2>
+                    <a href="#">View All Rings <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div id="bridal-engagement-grid" class="products-grid"></div>
+            </div>
+
+            <div class="category-section" id="wedding">
+                <div class="category-title">
+                    <h2><i class="fas fa-ring"></i> Wedding Bands</h2>
+                    <a href="#">View All Bands <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div id="bridal-wedding-grid" class="products-grid"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>Timeless jewellery crafted with purity, trust, and elegance. Serving our clients for generations with the finest gold and diamond collections.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Collections</h3>
+                    <ul>
+                        <li><a href="gold-collection.html">Gold Jewellery</a></li>
+                        <li><a href="diamond-collection.html">Diamond Jewellery</a></li>
+                        <li><a href="bridal-jewellery.html">Bridal Jewellery</a></li>
+                        <li><a href="vintage-gold.html">Vintage Gold</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Main Road, Hyderabad, Telangana</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@ldjgolddiamonds.com</p>
+                </div>
+            </div>
+            <div class="copyright"><p>© 2025 LDJ Gold & Diamonds. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+    async function loadProducts(categoryFilter, subCategoryFilter, containerId) {
+        try {
+            // 1. Fetch data
+            const response = await fetch('products.json');
+            
+            // Check if fetch was successful
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            // 2. Filter data
+            const filteredProducts = data.products.filter(product => {
+                const matchesCategory = product.category === categoryFilter;
+                const matchesSub = subCategoryFilter ? product.subcategory === subCategoryFilter : true;
+                return matchesCategory && matchesSub;
+            });
+
+            if (filteredProducts.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #777;">No products found in this category.</p>';
+                return;
+            }
+
+            // 3. Render HTML
+            container.innerHTML = filteredProducts.map(product => {
+                let specsHtml = '';
+                if (product.specs) {
+                    for (const [key, val] of Object.entries(product.specs)) {
+                        specsHtml += `<span><strong>${key}:</strong> ${val}</span>`;
+                    }
+                }
+
+                // Fallback image URL
+                const fallbackImage = 'https://placehold.co/600x600/f8f8f8/D4AF37?text=Image+Unavailable';
+
+                return `
+                    <div class="product-card">
+                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                        <div class="product-image">
+                            <img 
+                                src="${product.image}" 
+                                alt="${product.name}" 
+                                loading="lazy"
+                                onerror="this.onerror=null; this.src='${fallbackImage}';"
+                            >
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <div class="product-meta">
+                                ${specsHtml}
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$${product.price.toLocaleString()}</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?id=${product.id}" class="btn btn-outline btn-small">Details</a>
+                                <a href="contact.html" class="btn btn-small">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+        } catch (error) {
+            console.error('Error loading products:', error);
+            const container = document.getElementById(containerId);
+            if(container) {
+                // Friendly error message for the user
+                container.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px; background: #fff;">
+                        <i class="fas fa-exclamation-circle" style="font-size: 30px; color: #D4AF37; margin-bottom: 10px;"></i>
+                        <p>Unable to load products. If you are opening this file directly, please use a Local Server.</p>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load Bridal Products
+        loadProducts('Bridal', 'Sets', 'bridal-sets-grid');
+        loadProducts('Bridal', 'Engagement', 'bridal-engagement-grid');
+        loadProducts('Bridal', 'Wedding', 'bridal-wedding-grid');
+        
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        if(menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+        }
+
+        // Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (header) {
+                if (window.scrollY > 100) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            }
+        });
+    });
+</script>
+</body>
+</html>

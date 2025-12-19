@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Jewellery Design | LDJ Gold & Diamonds | Personalized Creations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fefefe;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #D4AF37, #F4C542);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #F4C542, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-creative {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .btn-creative:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: #fff;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #D4AF37;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #D4AF37;
+        }
+
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 58px;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #eee;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        .hero-creative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .creative-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            backdrop-filter: blur(10px);
+        }
+
+        .creative-badge i {
+            color: #6a11cb;
+            font-size: 24px;
+        }
+
+        /* Custom Process Section */
+        .custom-process {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #D4AF37;
+            transform: translateX(-50%);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-content {
+            flex: 1;
+            padding: 40px;
+            background: #f8f8f8;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-step:nth-child(odd) .step-content {
+            margin-right: 40px;
+        }
+
+        .process-step:nth-child(even) .step-content {
+            margin-left: 40px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: #D4AF37;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 24px;
+            z-index: 2;
+            border: 4px solid #fff;
+        }
+
+        .step-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .step-content p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .step-details {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .step-details span {
+            display: block;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .step-details span i {
+            color: #D4AF37;
+            margin-right: 8px;
+        }
+
+        /* Design Gallery */
+        .design-gallery {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .gallery-tab {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .gallery-tab:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+
+        .gallery-tab.active {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #000;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item .design-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #6a11cb;
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .gallery-image {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 25px;
+        }
+
+        .gallery-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .gallery-info .design-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .gallery-info .style {
+            color: #6a11cb;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .gallery-info .client {
+            color: #1a1a1a;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .gallery-info p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .gallery-info .design-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .design-feature {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Enquiry Form Section */
+        .enquiry-form-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .enquiry-container {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .enquiry-content {
+            flex: 1;
+        }
+
+        .enquiry-content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .enquiry-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .enquiry-features {
+            margin-top: 40px;
+        }
+
+        .enquiry-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .enquiry-feature i {
+            font-size: 22px;
+            color: #D4AF37;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .enquiry-form {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .form-group label span {
+            color: #D4AF37;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .form-control:focus {
+            border-color: #D4AF37;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-checkbox input {
+            margin-right: 10px;
+        }
+
+        .form-checkbox label {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .form-checkbox label a {
+            color: #D4AF37;
+            text-decoration: underline;
+        }
+
+        /* Inspiration Section */
+        .inspiration-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        .inspiration-content h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .inspiration-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #eee;
+            line-height: 1.7;
+        }
+
+        .inspiration-ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .idea-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .idea-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .idea-card i {
+            font-size: 40px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .idea-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .idea-card p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #D4AF37;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 48px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .enquiry-container {
+                flex-direction: column;
+            }
+            
+            .process-timeline:before {
+                left: 30px;
+            }
+            
+            .process-step {
+                flex-direction: row !important;
+            }
+            
+            .step-content {
+                margin-left: 80px !important;
+                margin-right: 0 !important;
+            }
+            
+            .step-number {
+                left: 30px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .page-hero h1 {
+                font-size: 42px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero-creative {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-filter {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gallery-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .inspiration-ideas {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .page-hero .tagline {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .inspiration-content h2 {
+                font-size: 32px;
+            }
+            
+            .inspiration-content p {
+                font-size: 18px;
+            }
+            
+            .enquiry-content h2 {
+                font-size: 32px;
+            }
+            
+            .step-content {
+                padding: 25px;
+                margin-left: 60px !important;
+            }
+            
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                LDJ <span>Gold & Diamonds</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="custom-jewellery.html" class="active">Custom Design</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Custom Jewellery Design</h1>
+            <p class="tagline">Transform your vision into a unique masterpiece. Our custom jewellery service brings your personal stories, memories, and dreams to life through bespoke creations crafted by master artisans.</p>
+            
+            <div class="hero-creative">
+                <div class="creative-badge">
+                    <i class="fas fa-pencil-alt"></i>
+                    <span>Personalized Designs</span>
+                </div>
+                <div class="creative-badge">
+                    <i class="fas fa-handshake"></i>
+                    <span>Collaborative Process</span>
+                </div>
+                <div class="creative-badge">
+                    <i class="fas fa-gem"></i>
+                    <span>Heirloom Quality</span>
+                </div>
+            </div>
+            
+            <a href="#enquiry" class="btn btn-creative" style="margin-top: 40px;">Start Your Design Journey</a>
+        </div>
+    </section>
+
+    <!-- Custom Process Section -->
+    <section class="custom-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Design Process</h2>
+                <p>A collaborative journey from initial concept to finished masterpiece. We guide you through every step to ensure your vision becomes reality.</p>
+            </div>
+            
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-content">
+                        <h3>Initial Consultation</h3>
+                        <p>We begin with a personal conversation to understand your vision, inspiration, and story. Bring sketches, photos, or ideas—or start from scratch with our designers' guidance.</p>
+                        <div class="step-details">
+                            <span><i class="far fa-clock"></i> Duration: 60-90 minutes</span>
+                            <span><i class="fas fa-users"></i> In-person or virtual</span>
+                            <span><i class="fas fa-lightbulb"></i> Bring inspiration materials</span>
+                        </div>
+                    </div>
+                    <div class="step-number">1</div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-content">
+                        <h3>Concept Development</h3>
+                        <p>Our designers create initial sketches and digital renderings based on our discussion. We explore design options, materials, and gemstone selections that align with your vision and budget.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-pencil-alt"></i> 2-3 design concepts</span>
+                            <span><i class="fas fa-laptop"></i> Digital renderings provided</span>
+                            <span><i class="fas fa-gem"></i> Gemstone selection guidance</span>
+                        </div>
+                    </div>
+                    <div class="step-number">2</div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-content">
+                        <h3>Design Refinement</h3>
+                        <p>We refine the chosen concept based on your feedback. You'll see detailed drawings, material samples, and precise specifications before we begin crafting.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-eye"></i> Review detailed drawings</span>
+                            <span><i class="fas fa-hand-pointer"></i> Material samples to touch</span>
+                            <span><i class="fas fa-check-circle"></i> Final approval before crafting</span>
+                        </div>
+                    </div>
+                    <div class="step-number">3</div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-content">
+                        <h3>Crafting & Creation</h3>
+                        <p>Our master artisans bring your design to life using traditional techniques combined with modern precision. You'll receive progress updates and photos throughout the creation process.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-hammer"></i> Handcrafted by artisans</span>
+                            <span><i class="fas fa-camera"></i> Progress photos provided</span>
+                            <span><i class="fas fa-tools"></i> 4-8 week creation time</span>
+                        </div>
+                    </div>
+                    <div class="step-number">4</div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="step-content">
+                        <h3>Final Presentation</h3>
+                        <p>Your completed piece is presented in our private viewing room. We ensure perfect fit and comfort, and provide care instructions and certification documents.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-gift"></i> Private presentation</span>
+                            <span><i class="fas fa-ruler-combined"></i> Perfect fit adjustment</span>
+                            <span><i class="fas fa-file-certificate"></i> Documentation provided</span>
+                        </div>
+                    </div>
+                    <div class="step-number">5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Gallery -->
+    <section class="design-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Custom Design Gallery</h2>
+                <p>Explore some of our recent custom creations. Each piece tells a unique story and reflects the personality of its owner.</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="gallery-tab active" data-category="all">All Designs</button>
+                <button class="gallery-tab" data-category="engagement">Engagement</button>
+                <button class="gallery-tab" data-category="heirloom">Heirloom Redesign</button>
+                <button class="gallery-tab" data-category="statement">Statement Pieces</button>
+                <button class="gallery-tab" data-category="mens">Men's Jewellery</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Engagement Design -->
+                <div class="gallery-item" data-category="engagement">
+                    <div class="design-badge">Engagement</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Custom Engagement Ring">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Botanical Engagement Ring</h3>
+                        <div class="design-meta">
+                            <span class="style">Nature Inspired</span>
+                            <span class="client">For Sarah & Michael</span>
+                        </div>
+                        <p>Custom engagement ring featuring leaf motifs and a central diamond, inspired by the couple's love for nature and hiking adventures.</p>
+                        <div class="design-features">
+                            <span class="design-feature">2.1ct center diamond</span>
+                            <span class="design-feature">Platinum setting</span>
+                            <span class="design-feature">Leaf motifs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Heirloom Redesign -->
+                <div class="gallery-item" data-category="heirloom">
+                    <div class="design-badge">Heirloom</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Heirloom Redesign">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Family Heritage Necklace</h3>
+                        <div class="design-meta">
+                            <span class="style">Heirloom Fusion</span>
+                            <span class="client">For Elena's Family</span>
+                        </div>
+                        <p>Combined three generations of family diamonds into a modern pendant that preserves sentimental value while creating a contemporary design.</p>
+                        <div class="design-features">
+                            <span class="design-feature">Family diamonds</span>
+                            <span class="design-feature">18K yellow gold</span>
+                            <span class="design-feature">Custom clasp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Statement Piece -->
+                <div class="gallery-item" data-category="statement">
+                    <div class="design-badge">Statement</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Statement Earrings">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Architectural Earrings</h3>
+                        <div class="design-meta">
+                            <span class="style">Modern Architecture</span>
+                            <span class="client">For Jessica, Architect</span>
+                        </div>
+                        <p>Geometric earrings inspired by skyscraper designs, featuring precise angles and a combination of diamonds and sapphires.</p>
+                        <div class="design-features">
+                            <span class="design-feature">Geometric design</span>
+                            <span class="design-feature">Diamonds & sapphires</span>
+                            <span class="design-feature">White gold</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Men's Jewellery -->
+                <div class="gallery-item" data-category="mens">
+                    <div class="design-badge">Men's</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Custom Men's Ring">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Celestial Signet Ring</h3>
+                        <div class="design-meta">
+                            <span class="style">Astronomy Inspired</span>
+                            <span class="client">For David, Astronomer</span>
+                        </div>
+                        <p>Custom signet ring featuring constellations meaningful to the client, with diamond stars set against black onyx sky.</p>
+                        <div class="design-features">
+                            <span class="design-feature">Constellation design</span>
+                            <span class="design-feature">Black onyx & diamonds</span>
+                            <span class="design-feature">18K rose gold</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Engagement Design 2 -->
+                <div class="gallery-item" data-category="engagement">
+                    <div class="design-badge">Engagement</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Art Deco Ring">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Art Deco Revival</h3>
+                        <div class="design-meta">
+                            <span class="style">Vintage Glamour</span>
+                            <span class="client">For Isabella</span>
+                        </div>
+                        <p>Inspired by 1920s Art Deco designs, this ring features geometric patterns, French-cut sapphires, and intricate filigree work.</p>
+                        <div class="design-features">
+                            <span class="design-feature">Art Deco style</span>
+                            <span class="design-feature">Sapphire accents</span>
+                            <span class="design-feature">Platinum filigree</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Statement Piece 2 -->
+                <div class="gallery-item" data-category="statement">
+                    <div class="design-badge">Statement</div>
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Custom Bracelet">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Wave Form Bracelet</h3>
+                        <div class="design-meta">
+                            <span class="style">Ocean Inspired</span>
+                            <span class="client">For Marine Biologist</span>
+                        </div>
+                        <p>Bracelet with flowing wave motifs, featuring graduated blue sapphires representing ocean depths and diamond sea foam accents.</p>
+                        <div class="design-features">
+                            <span class="design-feature">Wave design</span>
+                            <span class="design-feature">Blue sapphires</span>
+                            <span class="design-feature">Flexible construction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="collections.html" class="btn btn-outline">Browse Our Collections for Inspiration</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section class="enquiry-form-section" id="enquiry">
+        <div class="container">
+            <div class="enquiry-container">
+                <div class="enquiry-content">
+                    <h2>Start Your Custom Design</h2>
+                    <p>Tell us about your vision for a custom jewellery piece. Whether you have a clear idea or need guidance developing a concept, our design team is here to bring your personal story to life.</p>
+                    <p>We recommend gathering inspiration images, considering the occasion or meaning behind the piece, and thinking about your preferred metals and gemstones before our consultation.</p>
+                    
+                    <div class="enquiry-features">
+                        <div class="enquiry-feature">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h3>Personal Response</h3>
+                                <p>Our design director personally responds to each enquiry within 24 hours.</p>
+                            </div>
+                        </div>
+                        <div class="enquiry-feature">
+                            <i class="fas fa-lock"></i>
+                            <div>
+                                <h3>Privacy Assured</h3>
+                                <p>Your ideas and personal information are kept completely confidential.</p>
+                            </div>
+                        </div>
+                        <div class="enquiry-feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h3>No Obligation Consultation</h3>
+                                <p>Initial consultations are complimentary with no pressure to proceed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn" style="margin-top: 30px;">Or Call Us Directly: (212) 555-0123</a>
+                </div>
+                
+                <div class="enquiry-form">
+                    <div class="form-header">
+                        <h3>Design Enquiry Form</h3>
+                        <p>Complete this form to begin your custom design journey</p>
+                    </div>
+                    
+                    <form id="customDesignForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span>*</span></label>
+                                <input type="text" id="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span>*</span></label>
+                                <input type="text" id="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span>*</span></label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Type of Project <span>*</span></label>
+                            <select id="projectType" class="form-control" required>
+                                <option value="">Select project type</option>
+                                <option value="engagement">Engagement Ring</option>
+                                <option value="wedding">Wedding Band</option>
+                                <option value="anniversary">Anniversary Gift</option>
+                                <option value="heirloom">Heirloom Redesign</right>
+                                <option value="statement">Statement Piece</option>
+                                <option value="other">Other Custom Design</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Desired Timeline</label>
+                            <select id="timeline" class="form-control">
+                                <option value="">Select timeline</option>
+                                <option value="urgent">Within 1 month</option>
+                                <option value="moderate">1-3 months</option>
+                                <option value="flexible">3-6 months</option>
+                                <option value="planning">Just exploring ideas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" class="form-control">
+                                <option value="">Select budget range</option>
+                                <option value="under5">Under $5,000</option>
+                                <option value="5-10">$5,000 - $10,000</option>
+                                <option value="10-25">$10,000 - $25,000</option>
+                                <option value="25-50">$25,000 - $50,000</option>
+                                <option value="over50">$50,000+</option>
+                                <option value="notsure">Not sure yet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inspiration">Tell Us About Your Vision <span>*</span></label>
+                            <textarea id="inspiration" class="form-control" placeholder="Describe your ideas, inspiration, story, or any specific elements you'd like to include..." required></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">I'd like to receive occasional updates about custom design inspiration and LDJ Gold & Diamonds collections.</label>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">I agree to the <a href="#">privacy policy</a> and understand my information will be used solely for responding to this enquiry. <span>*</span></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-creative" style="width: 100%;">Submit Design Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section class="inspiration-section">
+        <div class="container">
+            <div class="inspiration-content">
+                <h2>Need Design Inspiration?</h2>
+                <p>Custom jewellery can commemorate any meaningful moment or express your unique personality. Here are some ideas to spark your imagination.</p>
+                
+                <div class="inspiration-ideas">
+                    <div class="idea-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Love Stories</h3>
+                        <p>Engagement rings, anniversary gifts, or pieces incorporating significant dates or coordinates</p>
+                    </div>
+                    
+                    <div class="idea-card">
+                        <i class="fas fa-family"></i>
+                        <h3>Family Heritage</h3>
+                        <p>Redesigning heirlooms, birthstone jewellery, or pieces honoring family traditions</p>
+                    </div>
+                    
+                    <div class="idea-card">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Personal Passions</h3>
+                        <p>Nature-inspired designs, hobby-related motifs, or symbols of personal achievements</p>
+                    </div>
+                    
+                    <div class="idea-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Artistic Expression</h3>
+                        <p>Geometric designs, abstract forms, or pieces inspired by favorite art or architecture</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 60px;">
+                    <a href="collections.html" class="btn btn-outline">Browse Collections for Ideas</a>
+                    <a href="contact.html" class="btn">Schedule Design Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>LDJ Gold & Diamonds</h3>
+                    <p>For over three generations, we've been creating bespoke jewellery that tells personal stories and celebrates life's most meaningful moments.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Custom Design Services</h3>
+                    <ul>
+                        <li><a href="#process">Design Process</a></li>
+                        <li><a href="#gallery">Design Gallery</a></li>
+                        <li><a href="collections.html">Inspiration Collections</a></li>
+                        <li><a href="#heirloom">Heirloom Redesign</a></li>
+                        <li><a href="#mens">Men's Custom Jewellery</a></li>
+                        <li><a href="#repurpose">Gemstone Repurposing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Design Resources</h3>
+                    <ul>
+                        <li><a href="#budget">Budget Planning Guide</a></li>
+                        <li><a href="#timeline">Design Timeline</a></li>
+                        <li><a href="#materials">Material Selection Guide</a></li>
+                        <li><a href="#gemstones">Gemstone Education</a></li>
+                        <li><a href="#care">Custom Jewellery Care</a></li>
+                        <li><a href="#insurance">Insurance & Appraisal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Diamond District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> design@ldjgolddiamonds.com</p>
+                    <p><i class="fas fa-clock"></i> Design Consultations: By Appointment</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LDJ Gold & Diamonds. All rights reserved. | Every custom design is a unique story</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery filtering functionality
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                // Show/hide gallery items based on category
+                galleryItems.forEach(item => {
+                    if (category === 'all') {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('customDesignForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let valid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#e75480';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (valid) {
+                // In a real implementation, this would send data to a server
+                // For demo purposes, we'll show a success message
+                alert('Thank you for your custom design enquiry! Our design director will contact you within 24 hours to discuss your vision.');
+                this.reset();
+                
+                // Scroll to top of form
+                document.getElementById('enquiry').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                alert('Please fill in all required fields (marked with *).');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to gallery items and process steps on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe gallery items, process steps, and idea cards
+        document.querySelectorAll('.gallery-item, .process-step, .idea-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+
+        // Animate process steps with staggered delay
+        const processSteps = document.querySelectorAll('.process-step');
+        processSteps.forEach((step, index) => {
+            step.style.transitionDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
